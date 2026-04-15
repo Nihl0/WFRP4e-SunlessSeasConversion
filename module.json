@@ -1,10 +1,10 @@
 {
   "id": "species-of-saga",
   "title": "Species of Saga",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "compatibility": {
       "minimum": "11",
-      "verified": "11"
+      "verified": "13"
   },
   "relationships": {
       "systems": [
@@ -16,6 +16,8 @@
       ]
   },
   "scripts": [
+      "scripts/careers.js",
+      "scripts/magics.js",
       "scripts/species.js"
   ]
 }
