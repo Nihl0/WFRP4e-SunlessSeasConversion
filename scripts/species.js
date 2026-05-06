@@ -59,7 +59,7 @@ Hooks.on("setup", () => {
             "fel": "2d10+15"
         },
     }
-
+    
     WFRP4E.speciesSkills = {
         "human": [
             "Animal Care",
@@ -118,7 +118,7 @@ Hooks.on("setup", () => {
             "Trade (Cook)"
         ],
     }
-
+    
     WFRP4E.speciesTalents = {
         "human": [
             "Doomed, random[1]",
@@ -148,42 +148,42 @@ Hooks.on("setup", () => {
             1
         ]
     }
-
+    
     WFRP4E.speciesMovement = {
         "human": 4,
         "halfblood": 5,
         "goblin": 4,
         "guzik": 3
     }
-
+    
     WFRP4E.speciesFate = {
         "human": 2,
         "halfblood": 1,
         "goblin": 0,
         "guzik": 2
     }
-
+    
     WFRP4E.speciesRes = {
         "human": 1,
         "halfblood": 2,
         "goblin": 2,
         "guzik": 0
     }
-
+    
     WFRP4E.speciesExtra = {
         "human": 3,
         "halfblood": 1,
         "goblin": 2,
         "guzik": 2
     }
-
+    
     WFRP4E.speciesAge = {
         "human": "16+2d10",
         "halfblood": "15+3d10",
         "goblin": "12+1d10",
         "guzik": "30+10d10"
     }
-
+    
     WFRP4E.speciesHeight = {
         "human": {
             feet: 4,
@@ -206,12 +206,12 @@ Hooks.on("setup", () => {
             die: "1d10"
         }
     }
-
-        // SUBSPECIES
+    
+    // SUBSPECIES
     WFRP4E.subspecies = {
         human: {
-            enkrati: {
-                name: "Enkrati",
+            anoi: {
+                name: "Anoi",
                 skills: [
                     "Animal Care",
                     "Cool",
@@ -230,6 +230,74 @@ Hooks.on("setup", () => {
                     "Resistance (Daemonic)",
                     "Roughrider, Sturdy",
                     "Sharp, Marksman",
+                    2
+                ]
+            },
+            arnicr: {
+                name: "Arnic Rodinan",
+                skills: [
+                    "Entertain (Storytelling)",
+                    "Evaluate",
+                    "Gossip",
+                    "Haggle",
+                    "Language (Rodinan)",
+                    "Language (Trostani)",
+                    "Leadership",
+                    "Lore (North Coast)",
+                    "Melee (Basic)",
+                    "Ranged (Throwing)",
+                    "Sail (Any)",
+                    "Swim"
+                ],
+                talents: [
+                    "Doomed, random[1]",
+                    "Fisherman, Rover",
+                    "Stout-hearted, Very Resilient",
+                    2
+                ]
+            },
+            arnict: {
+                name: "Arnic Trostani",
+                skills: [
+                    "Art (Woodcarving)",
+                    "Athletics",
+                    "Consume Alcohol",
+                    "Endurance",
+                    "Entertain (Sing)",
+                    "Haggle",
+                    "Language (Rodinan)",
+                    "Language (Trostani)",
+                    "Lore (Ishtaden)",
+                    "Melee (Polearm)",
+                    "Outdoor Survival",
+                    "Trade (choose one)"
+                ],
+                talents: [
+                    "Doomed",
+                    "Savvy, Nimble Fingered",
+                    3
+                ]
+            },
+            enkratan: {
+                name: "Enkratan",
+                skills: [
+                    "Cool",
+                    "Endurance",
+                    "Evaluate",
+                    "Intimidate",
+                    "Language (Enkrati)",
+                    "Language (Virossi)",
+                    "Leadership",
+                    "Lore (Enkrata)",
+                    "Lore (Theology)",
+                    "Melee (Basic or Polearm)",
+                    "Ranged (Bow or Throwing)",
+                    "Trade (choose one)"
+                ],
+                talents: [
+                    "Etiquette (choose group)", "Stone Soup",
+                    "Nimble Fingered, Very Resilient",
+                    "Resistance (Disease), Tenacious",
                     2
                 ]
             },
@@ -278,51 +346,6 @@ Hooks.on("setup", () => {
                     3
                 ]
             },
-            rodina: {
-                name: "Rodina",
-                skills: [
-                    "Entertain (Storytelling)",
-                    "Evaluate",
-                    "Gossip",
-                    "Haggle",
-                    "Language (Rodinan)",
-                    "Language (Trostani)",
-                    "Leadership",
-                    "Lore (North Coast)",
-                    "Melee (Basic)",
-                    "Ranged (Throwing)",
-                    "Sail (Any)",
-                    "Swim"
-                ],
-                talents: [
-                    "Doomed, random[1]",
-                    "Fisherman, Rover",
-                    "Stout-hearted, Very Resilient",
-                    2
-                ]
-            },
-            trostani: {
-                name: "Trostani",
-                skills: [
-                    "Art (Woodcarving)",
-                    "Athletics",
-                    "Consume Alcohol",
-                    "Endurance",
-                    "Entertain (Sing)",
-                    "Haggle",
-                    "Language (Rodinan)",
-                    "Language (Trostani)",
-                    "Lore (Ishtaden)",
-                    "Melee (Polearm)",
-                    "Outdoor Survival",
-                    "Trade (choose one)"
-                ],
-                talents: [
-                    "Doomed",
-                    "Savvy, Nimble Fingered",
-                    3
-                ]
-            },
             vulian: {
                 name: "Vulian",
                 skills: [
@@ -331,7 +354,7 @@ Hooks.on("setup", () => {
                     "Evaluate",
                     "Gossip",
                     "Haggle",
-                    "Language (Kosarin)",
+                    "Language (Docian Vulgar)",
                     "Language (Vuli)",
                     "Leadership",
                     "Lore (Eastern Lands)",
@@ -395,6 +418,7 @@ Hooks.on("setup", () => {
                 ],
                 talents: [
                     "Acute Sense (Hearing)",
+                    "Etiquette (choose group)",
                     "Hardy, Read/Write",
                     "Savvy, Sharp",
                     "Night Vision",
@@ -420,6 +444,7 @@ Hooks.on("setup", () => {
                 ],
                 talents: [
                     "Acute Sense (Hearing)",
+                    "Etiquette (choose group)",
                     "Flee!, Rover",
                     "Lightning Reflexes, Sharp",
                     "Night Vision",
@@ -509,4 +534,3 @@ Hooks.on("setup", () => {
         }
     }
 })
-
