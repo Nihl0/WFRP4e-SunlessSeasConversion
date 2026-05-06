@@ -6,29 +6,32 @@ Hooks.once("init", () => {
     loreEffects: {},
   };
 
-  config.magicLores = {
+    config.magicWind = {
     bleed: "Bleed",
     call: "Call",
     cant: "Cant",
     depth: "Depth",
     rose: "Rose",
+    scripture: ["Soot", "Cant"],
     soot: "Soot",
     silt: "Silt",
     winter: "Winter",
     wood: "Wood"
   }
 
-  config.magicWind = {
+  config.magicLores = {
     bleed: "Bleed",
     call: "Call",
     cant: "Cant",
     depth: "Depth",
     rose: "Rose",
+    scripture: "Scripture",
     soot: "Soot",
     silt: "Silt",
     winter: "Winter",
     wood: "Wood"
   }
+
   
   config.loreEffectDescriptions = {
     bleed: "<p></p>",
@@ -39,7 +42,8 @@ Hooks.once("init", () => {
     soot: "<p>Insights of Soot inflicting Damage cause the target to become <em>Slowed</em> for one minute, reducing their Agility by 10 and their Movement by 1 (down to minimum of 3). Target can suffer from only one <em>Slowed</em> Effect at a time.</p>",
     silt: "<p></p>",
     winter: "<p></p>",
-    wood: "<p></p>"
+    wood: "<p></p>",
+    scripture: "<p></p>",
   }
 
   config.loreEffects = {
