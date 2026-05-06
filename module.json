@@ -16,8 +16,8 @@
       ]
   },
   "scripts": [
+      "scripts/species.js",
       "scripts/careers.js",
-      "scripts/magics.js",
-      "scripts/species.js"
+      "scripts/occult-insights.js"
   ]
 }
