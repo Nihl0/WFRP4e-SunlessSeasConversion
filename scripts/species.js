@@ -1,4 +1,4 @@
-Hooks.on("setup", () => {
+Hooks.once("setup", () => {
     const WFRP4E = game.wfrp4e.config
 
     // SPECIES
@@ -6,7 +6,7 @@ Hooks.on("setup", () => {
         "human": "Human",
         "halfblood": "Halfblood",
         "goblin": "Goblin",
-        "guzik": "Guzik",
+        "tyl": "Tyl",
     };
 
     WFRP4E.speciesCharacteristics = {
@@ -46,17 +46,17 @@ Hooks.on("setup", () => {
             "wp": "2d10+15",
             "fel": "2d10+15"
         },
-        "guzik": {
-            "ws": "2d10+20",
-            "bs": "2d10+10",
+        "tyl": {
+            "ws": "2d10+10",
+            "bs": "2d10+20",
             "s": "2d10+10",
             "t": "2d10+15",
-            "i": "2d10+30",
+            "i": "2d10+40",
             "ag": "2d10+30",
             "dex": "2d10+30",
             "int": "2d10+30",
             "wp": "2d10+30",
-            "fel": "2d10+15"
+            "fel": "2d10+20"
         },
     }
     
@@ -103,13 +103,13 @@ Hooks.on("setup", () => {
             "Ranged (Bow or Throwing)",
             "Stealth (Rural or Urban)"
         ],
-        "guzik": [
+        "tyl": [
             "Channelling",
             "Climb",
             "Dodge",
             "Entertain (Any)",
             "Intuition",
-            "Language (Guzik)",
+            "Language (Tyl)",
             "Lore (Herbs)",
             "Navigation",
             "Outdoor Survival",
@@ -139,7 +139,7 @@ Hooks.on("setup", () => {
             "Resistance (Disease)",
             0
         ],
-        "guzik": [
+        "tyl": [
             "Acute Sense (Sight), Second Sight",
             "Animal Affinity",
             "Night Vision",
@@ -153,35 +153,35 @@ Hooks.on("setup", () => {
         "human": 4,
         "halfblood": 5,
         "goblin": 4,
-        "guzik": 3
+        "tyl": 3
     }
     
     WFRP4E.speciesFate = {
         "human": 2,
         "halfblood": 1,
         "goblin": 0,
-        "guzik": 2
+        "tyl": 0
     }
     
     WFRP4E.speciesRes = {
         "human": 1,
         "halfblood": 2,
         "goblin": 2,
-        "guzik": 0
+        "tyl": 0
     }
     
     WFRP4E.speciesExtra = {
         "human": 3,
         "halfblood": 1,
         "goblin": 2,
-        "guzik": 2
+        "tyl": 2
     }
     
     WFRP4E.speciesAge = {
         "human": "16+2d10",
         "halfblood": "15+3d10",
         "goblin": "12+1d10",
-        "guzik": "30+10d10"
+        "tyl": "30+10d10"
     }
     
     WFRP4E.speciesHeight = {
@@ -200,7 +200,7 @@ Hooks.on("setup", () => {
             inches: 5,
             die: "1d10"
         },
-        "guzik": {
+        "tyl": {
             feet: 2,
             inches: 4,
             die: "1d10"
@@ -217,24 +217,24 @@ Hooks.on("setup", () => {
                     "Cool",
                     "Haggle",
                     "Intimidate",
-                    "Language (Krati)",
-                    "Language (Vuli)",
+                    "Language (Anoi)",
+                    "Language (Any)",
                     "Leadership",
                     "Lore (Local)",
                     "Melee (Cavalry or Two-Handed)",
                     "Outdoor Survival",
                     "Ranged (Bow)",
-                    "Ride (Yak)"
+                    "Ride (Horse or Yak)"
                 ],
                 talents: [
-                    "Resistance (Daemonic)",
+                    "Crack the Whip, Marksman",
+                    "Hatred (Roga or Halfbloods)",
                     "Roughrider, Sturdy",
-                    "Sharp, Marksman",
                     2
                 ]
             },
-            arnicr: {
-                name: "Arnic Rodinan",
+            arnesman: {
+                name: "Arnesman",
                 skills: [
                     "Entertain (Storytelling)",
                     "Evaluate",
@@ -256,26 +256,52 @@ Hooks.on("setup", () => {
                     2
                 ]
             },
-            arnict: {
-                name: "Arnic Trostani",
+            fjordling: {
+                name: "Arnic — Fjordling",
                 skills: [
-                    "Art (Woodcarving)",
-                    "Athletics",
+                    "Charm",
                     "Consume Alcohol",
-                    "Endurance",
-                    "Entertain (Sing)",
+                    "Entertain (Storytelling)",
+                    "Gossip",
                     "Haggle",
                     "Language (Rodinan)",
                     "Language (Trostani)",
-                    "Lore (Ishtaden)",
+                    "Lore (Vel Sura)",
+                    "Melee (Basic)",
+                    "Ranged (Bow or Throwing)",
+                    "Sail (Any)",
+                    "Swim"
+                ],
+                talents: [
+                    "Doomed, random[1]",
+                    "Fisherman, Carouser",
+                    "Old Salt, Rover",
+                    "Resolute, Strong-Minded",
+                    1
+                ]
+            },
+            isling: {
+                name: "Arnic — Isling",
+                skills: [
+                    "Entertain (Storytelling)",
+                    "Evaluate",
+                    "Haggle",
+                    "Intimidate",
+                    "Language (Rodinan)",
+                    "Lore (North Isles)",
+                    "Lore (Theology)",
                     "Melee (Polearm)",
-                    "Outdoor Survival",
-                    "Trade (choose one)"
+                    "Ranged (Throwing)",
+                    "Row",
+                    "Sail (Hulkship)",
+                    "Swim"
                 ],
                 talents: [
                     "Doomed",
-                    "Savvy, Nimble Fingered",
-                    3
+                    "Fisherman, War Leader",
+                    "Sea Legs, Warrior Born",
+                    "Tenacious",
+                    1
                 ]
             },
             enkratan: {
@@ -346,8 +372,53 @@ Hooks.on("setup", () => {
                     3
                 ]
             },
-            vulian: {
-                name: "Vulian",
+            trostani: {
+                name: "Trostani",
+                skills: [
+                    "Art (Woodcarving)",
+                    "Athletics",
+                    "Consume Alcohol",
+                    "Endurance",
+                    "Entertain (Sing)",
+                    "Haggle",
+                    "Language (Rodinan)",
+                    "Language (Trostani)",
+                    "Lore (Ishtaden)",
+                    "Melee (Polearm)",
+                    "Outdoor Survival",
+                    "Trade (choose one)"
+                ],
+                talents: [
+                    "Doomed",
+                    "Savvy, Nimble Fingered",
+                    3
+                ]
+            },
+            vargan: {
+                name: "Vargan",
+                skills: [
+                    "Athletics",
+                    "Consume Alcohol",
+                    "Gossip",
+                    "Haggle",
+                    "Intimidate",
+                    "Language (Vargan)",
+                    "Language (Rodinan)",
+                    "Leadership",
+                    "Lore (Folklore)",
+                    "Melee (Basic)",
+                    "Ranged (Throwing)",
+                    "Sail (Wolfship)"
+                ],
+                talents: [
+                    "Menacing, Rover",
+                    "Resistance (Daemonic)",
+                    "Stout-hearted, Warrior Born",
+                    2
+                ]
+            },
+            imperial: {
+                name: "Imperial",
                 skills: [
                     "Bribery",
                     "Charm",
@@ -373,6 +444,29 @@ Hooks.on("setup", () => {
         
         // HALFBLOODS
         halfblood: {
+            dagdan: {
+                name: "Dagdan",
+                skills: [
+                    "Athletics",
+                    "Climb",
+                    "Cool",
+                    "Endurance",
+                    "Evaluate",
+                    "Intimidate",
+                    "Language (Shale Tongue)",
+                    "Lore (Local)",
+                    "Outdoor Survival",
+                    "Melee (Basic)",
+                    "Ranged (Bow)",
+                    "Track"
+                ],
+                talents: [
+                    "Hardy, Tireless",
+                    "Night Vision",
+                    "Stout-hearted, Strong-minded",
+                    2
+                ]
+            },
             shalic: {
                 name: "Shalic",
                 skills: [
@@ -454,15 +548,15 @@ Hooks.on("setup", () => {
             }
         },
 
-        // Guzik
-        guzik: {
+        // Tyl
+        tyl: {
             bereen: {
                 name: "Bereen",
                 skills: [
                     "Channelling",
                     "Climb",
                     "Dodge",
-                    "Language (Guzik)",
+                    "Language (Tyl)",
                     "Lore (Riverways)",
                     "Navigation",
                     "Outdoor Survival",
@@ -487,7 +581,7 @@ Hooks.on("setup", () => {
                     "Channelling",
                     "Charm",
                     "Climb",
-                    "Language (Guzik)",
+                    "Language (Tyl)",
                     "Lore (Herbs)",
                     "Lore (Wormwoods)",
                     "Navigation",
